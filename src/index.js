@@ -8,7 +8,7 @@ const productController   =require("./controllers/productController")
 
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 
 // /register
 app.post("/register", register);

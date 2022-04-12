@@ -38,7 +38,7 @@ const login = async (req, res) => {
     if (!user)
       return res
         .status(400)
-        .send({ message: "Please try another email or password" });
+        .send({ message: "User not found plz login first" });
 
     // if user is found then we will match the passwords
     const match = user.checkPassword(req.body.password);
