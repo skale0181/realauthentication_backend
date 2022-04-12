@@ -16,7 +16,7 @@ app.post("/login", login);
 app.use("/users", userController);
 app.use("/products", productController);
 
-app.listen(1212, async()=>{
+app.listen(process.env.PORT || 1212, async()=>{
     try {
          await connect()
         console.log("listeninng to port 1212")
